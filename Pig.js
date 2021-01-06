@@ -2,11 +2,11 @@ class Pig extends BaseClass {
   // Extra
   constructor(x,y){
     super(x,y,50,50);
-    this.image = loadImage("sprites/enemy.png");
-    this.smoke1 = loadImage("sprites/smoke1.png");
-    this.smoke2 = loadImage("sprites/smoke2.png");
-    this.smoke3 = loadImage("sprites/smoke3.png");
-    this.smoke4 = loadImage("sprites/smoke4.png");
+    this.image = loadImage("enemy.png");
+    this.smoke1 = loadImage("smoke1.png");
+    this.smoke2 = loadImage("smoke2.png");
+    this.smoke3 = loadImage("smoke3.png");
+    this.smoke4 = loadImage("smoke4.png");
     this.counter = 0;
     this.damageLevel = 0;
     this.dead = false;
@@ -16,12 +16,12 @@ class Pig extends BaseClass {
   }
   display(){
     if(this.body.speed> 2.91&& this.damageLevel === 0){
-      this.image = loadImage("sprites/enemyDamaged.png");
+      this.image = loadImage("enemyDamaged.png");
       this.damageLevel = 1;
 
     }
     else if(this.body.speed> 3 && this.damageLevel === 1){
-      this.image = loadImage("sprites/enemyCritical.png");
+      this.image = loadImage("enemyCritical.png");
       this.damageLevel = 2;
     }
     else if(this.body.speed< 4 && this.dead === false){
